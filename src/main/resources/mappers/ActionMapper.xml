@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fyx.springboot.dao.ActionDao" >
+  <resultMap id="BaseResultMap" type="com.fyx.springboot.entity.Action" >
+    <result column="ACTIONURL" property="actionUrl" jdbcType="VARCHAR" />
+    <result column="ACTIONMETHOD" property="actionMethod" jdbcType="VARCHAR" />
+    <result column="ACTIONDESC" property="actionDesc" jdbcType="VARCHAR" />
+    <result column="PARAMS" property="params" jdbcType="VARCHAR" />
+    <result column="CONTENTTYPE" property="contentType" jdbcType="VARCHAR" />
+    <result column="ACTIONTYPE" property="actionType" jdbcType="VARCHAR" />
+    <result column="MESSAGE" property="message" jdbcType="VARCHAR" />
+    <result column="MGRID" property="managerId" jdbcType="INTEGER" />
+    <result column="IP" property="ip" jdbcType="VARCHAR" />
+    <result column="ACTIONTIME" property="actionTime" jdbcType="VARCHAR" />
+
+  </resultMap>
+
+  <insert id="add" parameterType="com.fyx.springboot.entity.Action" >
+    INSERT INTO action (actionUrl, actionMethod, actionDesc, params, contentType, actionType, message, mgrId, ip, actionTime)
+    VALUES (#{actionUrl,jdbcType=VARCHAR}, #{actionMethod,jdbcType=VARCHAR},#{actionDesc,jdbcType=VARCHAR}, #{params,jdbcType=VARCHAR},#{contentType,jdbcType=VARCHAR}, #{actionType,jdbcType=VARCHAR},#{message,jdbcType=VARCHAR},#{managerId,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, #{actionTime,jdbcType=VARCHAR});
+</insert>
+</mapper>

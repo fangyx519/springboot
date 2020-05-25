@@ -1,0 +1,55 @@
+body,html{
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  font-weight: lighter;
+  color: #626262;
+  background-color: #66e8dc;
+}
+
+input{
+  display: block;
+  width: 200px;
+  padding: 10px 5px;
+  border-radius: 8px;
+  border: 1px solid #aeb0ba;
+  margin: 5px 0px;
+}
+
+button{
+  background-color: #79b6ff;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.empList {
+  font-family: verdana,arial,sans-serif;
+  font-size:15px;
+  color:#333333;
+  border-collapse: collapse;
+  margin: 10px 20px;
+  border-radius: 10px;
+}
+.empList th {
+  padding: 15px;
+}
+.empList td {
+  padding: 8px;
+  border-color: #a9c6c9;
+}
+
+.container{
+  height: 100%;
+  display: flex;
+  align-items: center;/*flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。*/
+  justify-content: center;/* 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。*/
+}
+
+.innerBox{
+  background-color: white;
+  box-shadow: 0px 0px 43px -2px rgba(135,130,135,1);
+  border-radius: 8px;
+}
